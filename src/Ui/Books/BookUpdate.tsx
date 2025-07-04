@@ -56,7 +56,7 @@ const BookUpdate = ({ book, onSuccess }: BookUpdateProps) => {
         createdAt: book.createdAt,
       }).unwrap();
 
-      toast.success(`✅ "${book.title}"Book Updated successfully!`, {
+      toast.success(`✅Book Updated successfully!`, {
         duration: 5000,
       });
       form.reset();
@@ -69,7 +69,7 @@ const BookUpdate = ({ book, onSuccess }: BookUpdateProps) => {
   return (
     <Form {...form}>
       <form
-        className="space-y-8 grid grid-cols-2 gap-x-6"
+        className="space-y-8 md:grid md:grid-cols-2 md:gap-x-6"
         onSubmit={form.handleSubmit(handleUpdate)}
       >
         <FormField

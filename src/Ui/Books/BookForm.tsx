@@ -68,7 +68,7 @@ const BookForm = () => {
 
     try {
       await createBook(bookData).unwrap();
-      toast.success(`✅ "${bookData.title}"Book Added successfully!`, {
+      toast.success(`✅Book Added successfully!`, {
         duration: 5000,
       });
 
@@ -84,7 +84,7 @@ const BookForm = () => {
       <Form {...form}>
         <form
           onSubmit={form.handleSubmit(createBookHandler)}
-          className="space-y-8 grid grid-cols-2 md:gap-x-6"
+          className="space-y-8 md:grid md:grid-cols-2 md:gap-x-6"
         >
           <FormField
             control={form.control}

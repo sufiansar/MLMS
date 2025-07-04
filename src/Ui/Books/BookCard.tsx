@@ -83,8 +83,8 @@ const BookCard = ({ book }: BookCardProps) => {
   `}
         >
           {book.copies <= 0
-            ? "No copies available"
-            : ` ${book.copies > 1 ? "" : ""} available`}
+            ? "Unavailable"
+            : ` ${book.copies > 1 ? "" : ""} Available`}
         </p>
       </CardContent>
 
