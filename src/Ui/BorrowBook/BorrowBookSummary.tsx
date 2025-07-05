@@ -6,7 +6,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { useBorrowBookSummaryQuery } from "@/Redux/features/Borrow/borrowApi";
+import { useBorrowBookSummaryQuery } from "@/Redux/features/Book/baseApi";
 
 const BorrowSummary = () => {
   const { data, isLoading, isError } = useBorrowBookSummaryQuery(undefined);

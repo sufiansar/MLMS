@@ -1,4 +1,4 @@
-import { useGetBooksQuery } from "@/Redux/features/Book/bookApi";
+import { useGetBooksQuery } from "@/Redux/features/Book/baseApi";
 import BookCard from "../Books/BookCard";
 import type { IBook } from "@/Redux/features/Book/bookTypes";
 

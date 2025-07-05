@@ -16,7 +16,8 @@ import {
   PopoverContent,
 } from "@/components/ui/popover";
 import { cn } from "@/lib/utils";
-import { useBorrowBookMutation } from "@/Redux/features/Borrow/borrowApi";
+import { useBorrowBookMutation } from "@/Redux/features/Book/baseApi";
+
 import { format } from "date-fns";
 
 import { CalendarIcon } from "lucide-react";
@@ -47,13 +48,14 @@ const BorrowBook = ({ bookId, onSuccess }: BorrowBookProps) => {
       };
 
       await borrow(payload).unwrap();
-      toast.success(`✅ "Book Borrowed successfully!`, {
+      toast.success(`✅ " Borrowed Book successfully!`, {
         duration: 5000,
       });
 
       onSuccess?.();
       form.reset();
     } catch (error) {
+      toast.error("Failed to borrow book. Please try again.");
       console.error("Failed to borrow book:", error);
     }
   };

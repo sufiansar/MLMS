@@ -16,9 +16,9 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { useAddBookMutation } from "@/Redux/features/Book/bookApi";
+
 import toast from "react-hot-toast";
-// import { toast } from "react-toastify";
+import { useAddBookMutation } from "@/Redux/features/Book/baseApi";
 
 export const Genre = {
   FICTION: "FICTION",
@@ -74,6 +74,7 @@ const BookForm = () => {
 
       form.reset();
     } catch (err: any) {
+      toast.error("Failed to add book. Please try again.");
       console.error("Failed to add book:", err);
     }
   };
@@ -135,7 +136,7 @@ const BookForm = () => {
                     <SelectItem value={Genre.SCIENCE}>SCIENCE</SelectItem>
                     <SelectItem value={Genre.HISTORY}>HISTORY</SelectItem>
                     <SelectItem value={Genre.BIOGRAPHY}>BIOGRAPHY</SelectItem>
-                    <SelectItem value={Genre.FANTASY}>Fantasy</SelectItem>
+                    <SelectItem value={Genre.FANTASY}>FANTASY</SelectItem>
                   </SelectContent>
                 </Select>
                 <FormMessage />

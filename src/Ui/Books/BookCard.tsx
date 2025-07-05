@@ -20,7 +20,6 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import { useDeleteBookMutation } from "@/Redux/features/Book/bookApi";
 
 import BookUpdate from "./BookUpdate";
 import { useState } from "react";
@@ -28,6 +27,7 @@ import { useState } from "react";
 import { Link } from "react-router";
 import BorrowBook from "../BorrowBook/BorrowBook";
 import toast from "react-hot-toast";
+import { useDeleteBookMutation } from "@/Redux/features/Book/baseApi";
 
 interface BookCardProps {
   book: IBook;
@@ -44,6 +44,7 @@ const BookCard = ({ book }: BookCardProps) => {
         duration: 4000,
       });
     } catch (error) {
+      toast.error("Failed to delete book. Please try again.");
       console.error("Failed to delete book:", error);
     }
   };

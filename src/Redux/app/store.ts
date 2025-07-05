@@ -1,16 +1,13 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { bookApi } from "../features/Book/bookApi";
-import { brrowApi } from "../features/Borrow/borrowApi";
+
+import { baseApi } from "../features/Book/baseApi";
 
 export const store = configureStore({
   reducer: {
-    [bookApi.reducerPath]: bookApi.reducer,
-    [brrowApi.reducerPath]: brrowApi.reducer,
+    [baseApi.reducerPath]: baseApi.reducer,
   },
   middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware()
-      .concat(bookApi.middleware)
-      .concat(brrowApi.middleware),
+    getDefaultMiddleware().concat(baseApi.middleware),
 });
 
 export type RootState = ReturnType<typeof store.getState>;

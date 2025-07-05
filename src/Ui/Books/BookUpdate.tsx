@@ -10,9 +10,18 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
-import { useUpdateBookMutation } from "@/Redux/features/Book/bookApi";
+
 import type { IBook } from "@/Redux/features/Book/bookTypes";
 import toast from "react-hot-toast";
+import { useUpdateBookMutation } from "@/Redux/features/Book/baseApi";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import { Genre } from "./BookForm";
 
 interface BookUpdateProps {
   book: IBook;
@@ -62,6 +71,7 @@ const BookUpdate = ({ book, onSuccess }: BookUpdateProps) => {
       form.reset();
       if (onSuccess) onSuccess();
     } catch (error) {
+      toast.error("Failed to update book. Please try again.");
       console.error("Failed to update book:", error);
     }
   };
@@ -103,10 +113,22 @@ const BookUpdate = ({ book, onSuccess }: BookUpdateProps) => {
           name="genre"
           render={({ field }) => (
             <FormItem>
-              <FormLabel className="text-xl">Genre</FormLabel>
-              <FormControl>
-                <Input placeholder="Genre" {...field} />
-              </FormControl>
+              <FormLabel>Genre</FormLabel>
+              <Select onValueChange={field.onChange} defaultValue={field.value}>
+                <FormControl className="w-full">
+                  <SelectTrigger>
+                    <SelectValue placeholder="Select Genre" />
+                  </SelectTrigger>
+                </FormControl>
+                <SelectContent>
+                  <SelectItem value={Genre.FICTION}>FICTION</SelectItem>
+                  <SelectItem value={Genre.NON_FICTION}>NON_FICTION</SelectItem>
+                  <SelectItem value={Genre.SCIENCE}>SCIENCE</SelectItem>
+                  <SelectItem value={Genre.HISTORY}>HISTORY</SelectItem>
+                  <SelectItem value={Genre.BIOGRAPHY}>BIOGRAPHY</SelectItem>
+                  <SelectItem value={Genre.FANTASY}>FANTASY</SelectItem>
+                </SelectContent>
+              </Select>
               <FormMessage />
             </FormItem>
           )}

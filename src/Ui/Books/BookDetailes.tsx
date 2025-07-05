@@ -1,9 +1,10 @@
 "use client";
 
 import { useParams } from "react-router";
-import { useGetSingleBookQuery } from "@/Redux/features/Book/bookApi";
+
 import { BookOpen } from "lucide-react";
 import { Table, TableBody, TableCell, TableRow } from "@/components/ui/table";
+import { useGetSingleBookQuery } from "@/Redux/features/Book/baseApi";
 
 const BookDetails = () => {
   const { id } = useParams();
