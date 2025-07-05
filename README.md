@@ -72,13 +72,11 @@
 
 
 
-
----
 ## Sample Usage: Add & Borrow a Book
 
 This section demonstrates how to add a book and borrow it using the MLMS API.
 
----
+
 
 ###  1. Add a New Book
 
