@@ -1,15 +1,13 @@
 # 📚 Minimal Library Management System (MLMS)
----
+
 
 **Minimal Library Management System (MLMS)** is a complete full-stack web application that allows users to manage a library of books and borrowing records. It uses the MERN stack with **TypeScript** and includes real-world features like book CRUD operations, borrowing logic with availability control, and a modular backend architecture.
 
 ---
 
 
-
 - [🎯 Project Overview](https://mlms-rust.vercel.app)
 
----
 
 ## 🎯 Project Overview
 
@@ -143,11 +141,8 @@ This project is ideal for:
 - 👨‍💻 Developers learning full-stack development with TypeScript
 - ⚙️ Practicing REST API design, frontend integration, and real-world business logic
 
-With its clean structure, reusable components, and real-time interactions, MLMS provides a solid foundation for building more advanced library or inventory systems in the future.
 
----
 
-> 💡 Feel free to fork, improve, or extend this project — contributions and ideas are always welcome!
 
 
 
