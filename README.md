@@ -72,16 +72,6 @@
 
 
 
----
-
-## 🔐 Environment Variables
-
-### Backend `.env`
-```env
-PORT=3000
-MONGODB_URI=mongodb://localhost:27017/mlms
-
-```
 
 ---
 ## Sample Usage: Add & Borrow a Book
