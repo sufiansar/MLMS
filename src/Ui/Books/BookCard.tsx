@@ -112,16 +112,12 @@ const BookCard = ({ book }: BookCardProps) => {
         </Dialog>
 
         <Link to={`/books/${book._id}`} className="w-full">
-          <Button variant="outline" className="w-full">
-            View Details
-          </Button>
+          <Button className="w-full">View Details</Button>
         </Link>
 
         <Dialog open={open} onOpenChange={setOpen}>
           <DialogTrigger asChild>
-            <Button variant="outline" className="w-full">
-              Edit Book
-            </Button>
+            <Button className="w-full">Edit Book</Button>
           </DialogTrigger>
 
           <DialogContent className="sm:max-w-2xl">

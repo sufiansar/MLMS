@@ -1,5 +1,3 @@
-"use client";
-
 import { Link } from "react-router";
 import { ModeToggle } from "@/components/theme/mode-toggle";
 import {
@@ -15,7 +13,7 @@ const Navbar = () => {
     <nav className="w-full sticky top-0 z-50 bg-background border-b">
       <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
         <Link to="/">
-          <span className="text-xl font-bold text-blue-600 hover:text-green-600">
+          <span className="text-xl font-bold text-purple-500 hover:text-green-600">
             MLMS
           </span>
         </Link>
