@@ -1,5 +1,3 @@
-"use client";
-
 import { useParams } from "react-router";
 
 import { BookOpen } from "lucide-react";
