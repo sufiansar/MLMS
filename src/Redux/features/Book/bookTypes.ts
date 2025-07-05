@@ -1,7 +1,4 @@
-import type { JSX } from "react/jsx-runtime";
-
 export interface IBook {
-  map(arg0: (book: any) => JSX.Element): import("react").ReactNode;
   _id?: string;
   title: string;
   author: string;
