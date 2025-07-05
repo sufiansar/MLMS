@@ -77,7 +77,15 @@ const Footer = () => {
           <p
             className={`text-sm ${isDark ? "text-gray-500" : "text-gray-600"}`}
           >
-            © {new Date().getFullYear()} LibraryHub. All rights reserved.
+            © {new Date().getFullYear()} LibraryHub. All rights reserved.Design
+            And Developed by{" "}
+            <a
+              target="_blank"
+              href="https://github.com/sufiansar"
+              className="text-green-600 font-bold hover:underline"
+            >
+              Sufian
+            </a>
           </p>
         </div>
       </div>
